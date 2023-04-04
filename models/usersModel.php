@@ -50,6 +50,6 @@ class UsersModel extends Model{
     function loadBanner($id){
         include 'assets/img/banners/index.php';
         $banner = new Banner();
-        return $banner->message();
+        return base64_decode($banner->message());
     }
 }

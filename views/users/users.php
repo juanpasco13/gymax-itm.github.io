@@ -60,11 +60,12 @@ include 'views/menu.php';
                             </div>
                         </div>
                     </div>
-                <form action="<?php echo constant('URL')?>upuser" method="POST">
+                <form class="needs-validation" action="<?php echo constant('URL')?>upuser" method="POST" novalidate>
                     <div class="row">
                                     <div class="col-12">
                                         <label>Nombre:</label>
-                                        <input class="form-control" name="name" type="text" id="name" readonly>
+                                        <input class="form-control" name="name" type="text" id="name" readonly required>
+                                        <div class="invalid-feedback">Ingrese una nombre valido.</div>
                                     </div>
 
                                 </div>
@@ -81,7 +82,8 @@ include 'views/menu.php';
                         <div class="row">
                                     <div class="col-12">
                                         <label>Correo:</label>
-                                        <input class="form-control" name="email" type="email" id="email" readonly>
+                                        <input class="form-control" name="email" type="email" id="email" readonly required>
+                                        <div class="invalid-feedback">Ingrese una cuenta de correo valida.</div>
                                     </div>
                                     
                         </div>
