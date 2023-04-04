@@ -1,1 +1,0 @@
-# gymax-itm.github.io
