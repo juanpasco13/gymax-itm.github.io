@@ -55,7 +55,7 @@
                 </a>
               </div><!-- End Logo -->
 
-              <div class="card mb-3">
+              <div class="card mb-3" style="width: 20cm;">
 
                 <div class="card-body">
 
@@ -65,19 +65,22 @@
                   </div>
 
                   <form action="<?php echo constant('URL')?>record" method="POST" class="row g-3 needs-validation" novalidate>
-                    <div class="col-12">
+                  <div class="row">
+                    <div class="col-6">
                       <label for="yourName" class="form-label">Nombre</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Porfavor, ingresa tu nombre.</div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-6">
                       <label for="yourEmail" class="form-label">Email</label>
                       <input type="email" name="email" class="form-control" id="yourEmail" required>
                       <div class="invalid-feedback">Porfavor, ingresa una cuenta de correo valida.</div>
                     </div>
-
-                    <div class="col-12">
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-6">
                       <label for="yourUsername" class="form-label">Nombre de Usuario</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
@@ -86,11 +89,23 @@
                       </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-6">
                       <label for="yourPassword" class="form-label">Contraseña</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                       <div class="invalid-feedback">Porfavor ingrese su contraseña!</div>
                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="gender">Genero</label>
+                      <select class="form-select" name="" aria-label="Default select example">
+                        <option selected>Seleccione</option>
+                        <option value="0">Hombre</option>
+                        <option value="1">Mujer</option>
+                        <option value="2">Otro</option>
+                      </select> 
+                    </div>            
+                  </div>
 
                     <div class="col-12">
                       <div class="form-check">

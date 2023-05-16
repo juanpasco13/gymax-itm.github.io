@@ -8,6 +8,6 @@ require_once 'utils/model.php';
 require_once 'utils/view.php';
 require_once 'config/config.php';
 
-ini_set('display_errors', true);
+ini_set('display_errors', false);
 
 $app = new App();

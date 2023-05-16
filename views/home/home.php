@@ -2,7 +2,6 @@
 include 'views/header.php';
 include 'views/menu.php';
 ?>
-  
 
     <!-- <div class="pagetitle">
       <h1>Dashboard</h1>

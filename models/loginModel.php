@@ -9,7 +9,7 @@ class LoginModel extends Model{
     function validateLogin($user, $password) {
         //session_start();
         $data = [];
-        $query = "SELECT `user_name`, `password`, `name`, `id` FROM `users` WHERE `user_name` = '$user'";
+        $query = "SELECT `user_name`, `password`, `name`, `id`, `gender` FROM `users` WHERE `user_name` = '$user'";
         $this->db->connect();
         $result = $this->db->getConnection()->query($query);
         while ($row = $result->fetch_assoc()) {
@@ -21,6 +21,7 @@ class LoginModel extends Model{
             $_SESSION['name'] = $data[0]['name'];
             $_SESSION['id'] = $data[0]['id'];
             $_SESSION['user'] = $data[0]['user_name'];
+            $_SESSION['genero'] = $data[0]['gender'];
             return 1;
            }
         }

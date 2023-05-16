@@ -1,5 +1,6 @@
 <?php 
 //echo 'este es el header';
+$genero = array(0 => 'profile-img.jpg', 1 =>'messages-1.jpg', 2 =>'no-bi.png');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -168,9 +169,8 @@
         </li><!-- End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
-
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src=<?php echo "assets/img/".$genero[$_SESSION['genero']]; ?> alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $_SESSION['name']; ?></span>
           </a><!-- End Profile Iamge Icon -->
 
